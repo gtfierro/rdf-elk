@@ -10,4 +10,4 @@ Then open `doe-medium-office-ahu-vav.ttl.svg` in a browser
 
 ### `models/223p/doe-medium-office-ahu-vav.ttl`
 
-![](img/doe-medium-office-ahu-vav.ttl.svg)
+![medium office svg](./img/doe-medium-office-ahu-vav.ttl.svg)

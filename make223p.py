@@ -19,6 +19,7 @@ g = brickschema.Graph()
 g.load_file(sys.argv[1])
 g.load_file("223p.ttl")
 g.expand("shacl+shacl+shacl")
+g.serialize("debug.ttl", format="turtle")
 
 seen = set()
 doc = {
@@ -54,13 +55,6 @@ for row in res:
         "portConstraints": "FIXED_SIDE",
         "spacing.portPort": "10.0",
     }
-    #nodes[node]["properties"] = {
-    #    "nodeLabels.placement": "[H_CENTER, V_TOP, INSIDE]",
-    #    "portLabels.placement": "[INSIDE]",
-    #    "portConstraints": "FIXED_SIDE",
-    #    "spacing.portPort": "10.0",
-    #}
-
     if "ports" not in nodes[node]:
         nodes[node]["ports"] = set()
     port = f"{node}:{nid(connpoint)}"
@@ -68,15 +62,13 @@ for row in res:
     ports[port] = {
         "id": port,
         "layoutOptions": {
-            #"port.side": "WEST" if "Inlet" in str(direction) else "EAST",
+            #"port.side": "[WEST, SOUTH]" if "Inlet" in str(direction) else "EAST",
             "portLabels.placement": "[INSIDE]",
         },
-        #"properties": {
-        #    "port.side": "WEST" if "Inlet" in str(direction) else "EAST",
-        #},
         "width": 8,
         "height": 8,
         "labels": [{"text": str(cplabel) if cplabel else nid(connpoint)}],
+        "class": ["port", "inlet"],
         #TODO: use direction/medium to place on side of node?
     }
 
@@ -113,39 +105,89 @@ for row in res:
         "id": gensym(),
         "sources": [cp1],
         "targets": [cp2],
-        "attributes": {"marker-end": "url(#arrow)"},
+        "attributes": {"marker-end": "url(#arrow)"}
     })
+
+# get properties
+res = g.query("""SELECT DISTINCT ?node ?loc ?prop ?proplabel WHERE {
+        ?loc s223:hasProperty ?prop .
+        ?loc s223:isConnectionPointOf ?node .
+        ?prop rdf:type/rdfs:subClassOf* s223:Property .
+        OPTIONAL {?prop rdfs:label ?proplabel}
+}""")
+seen_props = set()
+for row in res:
+    (node, loc, prop, plabel) = row
+    node = nid(node)
+    loc = nid(loc)
+    prop = nid(prop)
+
+    # only add each property once; otherwise we can get multiple edges and it is confusing
+    if prop in seen_props:
+        continue
+    seen_props.add(prop)
+
+    # add 'property' as a new node
+    nodes[prop]["id"] = prop
+    nodes[prop]["width"] = 120
+    nodes[prop]["height"] = 20
+    nodes[prop]["labels"] = [{"text": str(plabel) if plabel else prop, "height": 20, "width": 20}]
+    nodes[prop]["nodeSize.constraints"] =  "[PORTS, MINIMUM_SIZE]"
+    nodes[prop]["layoutOptions"] =  {
+        "nodeLabels.placement": "[INSIDE]",
+    }
+    nodes[prop]["ports"] = []
+    nodes[prop]["class"] = ["node", "s223property"]
+
+    # add edge to property
+    doc["edges"].append({
+        "id": gensym(),
+        "sources": [f"{node}:{loc}"],
+        "targets": [prop],
+        # TODO: dashed
+        "attributes": {"stroke-dasharray": "2,2"},
+        #"attributes": {"marker-end": "url(#arrow)"}
+    })
+
 
 for node in nodes.values():
     doc["children"].append(node)
 
-# devices = g.query("""SELECT DISTINCT ?dev ?dev2 WHERE {
-#     ?dev rdf:type/rdfs:subClassOf* s223:Device .
-#     ?dev2 rdf:type/rdfs:subClassOf* s223:Device .
-#     ?dev s223:connectedTo ?dev2 .
-# }""")
-# for i, dev in enumerate(devices):
-#     if nid(dev[0]) not in seen:
-#         doc["children"].append({
-#             "id": nid(dev[0]),
-#             "width": 120,
-#             "height": 30,
-#             "labels": [{"text": nid(dev[0])}],
-#         })
-#         seen.add(nid(dev[0]))
-#     if nid(dev[1]) not in seen:
-#         doc["children"].append({
-#             "id": nid(dev[1]),
-#             "width": 120,
-#             "height": 30,
-#             "labels": [{"text": nid(dev[1])}],
-#         })
-#         seen.add(nid(dev[1]))
-#     doc["edges"].append({
-#         "id": gensym(),
-#         "sources": [nid(dev[0])],
-#         "targets": [nid(dev[1])],
-#     })
+styles = """
+rect {
+  opacity: 0.8;
+  fill: #6094CC;
+  stroke-width: 1;
+  stroke: #222222;
+}
+rect.port {
+  opacity: 1;
+  fill: #FD4659;
+}
+text {
+  font-size: 10px;
+  font-family: sans-serif;
+  /* in elk's coordinates "hanging" would be the correct value" */
+  dominant-baseline: hanging;
+  text-align: left;
+}
+g.port > text {
+  font-size: 8px;
+}
+polyline {
+  fill: none;
+  stroke: black;
+  stroke-width: 1;
+}
+path {
+  fill: none;
+  stroke: black;
+  stroke-width: 1;
+}
+s223property {
+  fill: #32BF84;
+}
+"""
 
 js = f"""
 const ELK = require('elkjs')
@@ -157,7 +199,7 @@ const elk = new ELK()
 elk.layout(graph)
   .then(data => {{
     var renderer = new elksvg.Renderer();
-    var svg = renderer.toSvg(data);
+    var svg = renderer.toSvg(data, styles=`{styles}`);
     console.log(svg);
   }})
 """

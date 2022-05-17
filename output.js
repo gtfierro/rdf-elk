@@ -9,6 +9,100 @@ const graph = {
   },
   "children": [
     {
+      "id": "zone1-hvac-space",
+      "width": 180,
+      "height": 80,
+      "labels": [
+        {
+          "text": "zone1-hvac-space",
+          "height": 20,
+          "width": 80
+        }
+      ],
+      "nodeSize.constraints": "[PORTS, MINIMUM_SIZE]",
+      "layoutOptions": {
+        "nodeLabels.placement": "[H_CENTER, V_TOP, INSIDE]",
+        "portLabels.placement": "[INSIDE]",
+        "portConstraints": "FIXED_SIDE",
+        "spacing.portPort": "10.0"
+      },
+      "ports": [
+        {
+          "id": "zone1-hvac-space:zone1-hvac-space-out",
+          "layoutOptions": {
+            "portLabels.placement": "[INSIDE]"
+          },
+          "width": 8,
+          "height": 8,
+          "labels": [
+            {
+              "text": "zone1-hvac-space-out"
+            }
+          ]
+        },
+        {
+          "id": "zone1-hvac-space:zone1-hvac-space-in",
+          "layoutOptions": {
+            "portLabels.placement": "[INSIDE]"
+          },
+          "width": 8,
+          "height": 8,
+          "labels": [
+            {
+              "text": "zone1-hvac-space-in"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cooling-coil-2stage",
+      "width": 180,
+      "height": 80,
+      "labels": [
+        {
+          "text": "cooling-coil-2stage",
+          "height": 20,
+          "width": 80
+        }
+      ],
+      "nodeSize.constraints": "[PORTS, MINIMUM_SIZE]",
+      "layoutOptions": {
+        "nodeLabels.placement": "[H_CENTER, V_TOP, INSIDE]",
+        "portLabels.placement": "[INSIDE]",
+        "portConstraints": "FIXED_SIDE",
+        "spacing.portPort": "10.0"
+      },
+      "ports": [
+        {
+          "id": "cooling-coil-2stage:cooling-coil-out",
+          "layoutOptions": {
+            "portLabels.placement": "[INSIDE]"
+          },
+          "width": 8,
+          "height": 8,
+          "labels": [
+            {
+              "text": "cooling-coil-out"
+            }
+          ]
+        },
+        {
+          "id": "cooling-coil-2stage:cooling-coil-in",
+          "layoutOptions": {
+            "portLabels.placement": "[INSIDE]"
+          },
+          "width": 8,
+          "height": 8,
+          "labels": [
+            {
+              "text": "cooling-coil-in"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "heating-coil-1stage",
       "width": 180,
       "height": 80,
@@ -50,6 +144,53 @@ const graph = {
           "labels": [
             {
               "text": "heating-coil-in"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fan",
+      "width": 180,
+      "height": 80,
+      "labels": [
+        {
+          "text": "fan",
+          "height": 20,
+          "width": 80
+        }
+      ],
+      "nodeSize.constraints": "[PORTS, MINIMUM_SIZE]",
+      "layoutOptions": {
+        "nodeLabels.placement": "[H_CENTER, V_TOP, INSIDE]",
+        "portLabels.placement": "[INSIDE]",
+        "portConstraints": "FIXED_SIDE",
+        "spacing.portPort": "10.0"
+      },
+      "ports": [
+        {
+          "id": "fan:fan-in",
+          "layoutOptions": {
+            "portLabels.placement": "[INSIDE]"
+          },
+          "width": 8,
+          "height": 8,
+          "labels": [
+            {
+              "text": "fan-in"
+            }
+          ]
+        },
+        {
+          "id": "fan:fan-out",
+          "layoutOptions": {
+            "portLabels.placement": "[INSIDE]"
+          },
+          "width": 8,
+          "height": 8,
+          "labels": [
+            {
+              "text": "fan-out"
             }
           ]
         }
@@ -135,19 +276,6 @@ const graph = {
       },
       "ports": [
         {
-          "id": "vav1-dmp:vav1-dmp-out",
-          "layoutOptions": {
-            "portLabels.placement": "[INSIDE]"
-          },
-          "width": 8,
-          "height": 8,
-          "labels": [
-            {
-              "text": "vav1-dmp-out"
-            }
-          ]
-        },
-        {
           "id": "vav1-dmp:vav1-dmp-in",
           "layoutOptions": {
             "portLabels.placement": "[INSIDE]"
@@ -159,43 +287,9 @@ const graph = {
               "text": "vav1-dmp-in"
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "zone1-hvac-space",
-      "width": 180,
-      "height": 80,
-      "labels": [
-        {
-          "text": "zone1-hvac-space",
-          "height": 20,
-          "width": 80
-        }
-      ],
-      "nodeSize.constraints": "[PORTS, MINIMUM_SIZE]",
-      "layoutOptions": {
-        "nodeLabels.placement": "[H_CENTER, V_TOP, INSIDE]",
-        "portLabels.placement": "[INSIDE]",
-        "portConstraints": "FIXED_SIDE",
-        "spacing.portPort": "10.0"
-      },
-      "ports": [
-        {
-          "id": "zone1-hvac-space:zone1-hvac-space-out",
-          "layoutOptions": {
-            "portLabels.placement": "[INSIDE]"
-          },
-          "width": 8,
-          "height": 8,
-          "labels": [
-            {
-              "text": "zone1-hvac-space-out"
-            }
-          ]
         },
         {
-          "id": "zone1-hvac-space:zone1-hvac-space-in",
+          "id": "vav1-dmp:vav1-dmp-out",
           "layoutOptions": {
             "portLabels.placement": "[INSIDE]"
           },
@@ -203,101 +297,7 @@ const graph = {
           "height": 8,
           "labels": [
             {
-              "text": "zone1-hvac-space-in"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "cooling-coil-2stage",
-      "width": 180,
-      "height": 80,
-      "labels": [
-        {
-          "text": "cooling-coil-2stage",
-          "height": 20,
-          "width": 80
-        }
-      ],
-      "nodeSize.constraints": "[PORTS, MINIMUM_SIZE]",
-      "layoutOptions": {
-        "nodeLabels.placement": "[H_CENTER, V_TOP, INSIDE]",
-        "portLabels.placement": "[INSIDE]",
-        "portConstraints": "FIXED_SIDE",
-        "spacing.portPort": "10.0"
-      },
-      "ports": [
-        {
-          "id": "cooling-coil-2stage:cooling-coil-in",
-          "layoutOptions": {
-            "portLabels.placement": "[INSIDE]"
-          },
-          "width": 8,
-          "height": 8,
-          "labels": [
-            {
-              "text": "cooling-coil-in"
-            }
-          ]
-        },
-        {
-          "id": "cooling-coil-2stage:cooling-coil-out",
-          "layoutOptions": {
-            "portLabels.placement": "[INSIDE]"
-          },
-          "width": 8,
-          "height": 8,
-          "labels": [
-            {
-              "text": "cooling-coil-out"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "fan",
-      "width": 180,
-      "height": 80,
-      "labels": [
-        {
-          "text": "fan",
-          "height": 20,
-          "width": 80
-        }
-      ],
-      "nodeSize.constraints": "[PORTS, MINIMUM_SIZE]",
-      "layoutOptions": {
-        "nodeLabels.placement": "[H_CENTER, V_TOP, INSIDE]",
-        "portLabels.placement": "[INSIDE]",
-        "portConstraints": "FIXED_SIDE",
-        "spacing.portPort": "10.0"
-      },
-      "ports": [
-        {
-          "id": "fan:fan-out",
-          "layoutOptions": {
-            "portLabels.placement": "[INSIDE]"
-          },
-          "width": 8,
-          "height": 8,
-          "labels": [
-            {
-              "text": "fan-out"
-            }
-          ]
-        },
-        {
-          "id": "fan:fan-in",
-          "layoutOptions": {
-            "portLabels.placement": "[INSIDE]"
-          },
-          "width": 8,
-          "height": 8,
-          "labels": [
-            {
-              "text": "fan-in"
+              "text": "vav1-dmp-out"
             }
           ]
         }
@@ -353,7 +353,7 @@ const graph = {
   ],
   "edges": [
     {
-      "id": "1b3363e21cb64cf7",
+      "id": "c13cd6eae6627b69",
       "sources": [
         "economizer:economizer-mixed-air"
       ],
@@ -365,7 +365,7 @@ const graph = {
       }
     },
     {
-      "id": "4bc69f6b90aad1f2",
+      "id": "6959fe04f7dc45f6",
       "sources": [
         "cooling-coil-2stage:cooling-coil-out"
       ],
@@ -377,7 +377,7 @@ const graph = {
       }
     },
     {
-      "id": "58cdd209b9fc30fc",
+      "id": "0d92b1f3322e5983",
       "sources": [
         "heating-coil-1stage:heating-coil-out"
       ],
@@ -389,7 +389,7 @@ const graph = {
       }
     },
     {
-      "id": "5eb7115b04f463e6",
+      "id": "78a00c6fd6aa8461",
       "sources": [
         "fan:fan-out"
       ],
@@ -401,7 +401,7 @@ const graph = {
       }
     },
     {
-      "id": "5fbea50481a96089",
+      "id": "126c85532112a313",
       "sources": [
         "vav1-dmp:vav1-dmp-out"
       ],
@@ -413,7 +413,7 @@ const graph = {
       }
     },
     {
-      "id": "eacf4014774faa04",
+      "id": "0d9d79c9ea62c80f",
       "sources": [
         "vav1-rhc:vav1-rhc-out"
       ],
@@ -425,7 +425,7 @@ const graph = {
       }
     },
     {
-      "id": "1218fdfd3b44f5c7",
+      "id": "5c4b4b8c3c96c9f1",
       "sources": [
         "zone1-hvac-space:zone1-hvac-space-out"
       ],

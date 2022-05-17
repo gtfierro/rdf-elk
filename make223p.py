@@ -17,7 +17,6 @@ if len(sys.argv) < 2:
 
 g = brickschema.Graph()
 g.load_file(sys.argv[1])
-#g.load_file("data/nonconforming/g36-figure-a-9.ttl")
 g.load_file("223p.ttl")
 g.expand("shacl+shacl+shacl")
 

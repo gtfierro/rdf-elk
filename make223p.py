@@ -144,7 +144,6 @@ for row in res:
         "id": gensym(),
         "sources": [f"{node}:{loc}"],
         "targets": [prop],
-        # TODO: dashed
         "attributes": {"stroke-dasharray": "2,2"},
         #"attributes": {"marker-end": "url(#arrow)"}
     })
@@ -184,7 +183,7 @@ path {
   stroke: black;
   stroke-width: 1;
 }
-s223property {
+rect.s223property {
   fill: #32BF84;
 }
 """

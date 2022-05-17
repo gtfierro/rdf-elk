@@ -1,4 +1,4 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1204" height="484">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1405" height="744">
   <defs>
     <style type="text/css">
       <![CDATA[
@@ -9,6 +9,10 @@
           stroke: #222222;
         }
         rect.port {
+          opacity: 1;
+          fill: #6094CC;
+        }
+        rect.connectionpoint {
           opacity: 1;
           fill: #FD4659;
         }
@@ -35,6 +39,9 @@
         rect.s223property {
           fill: #32BF84;
         }
+        rect.sensor {
+          fill: #9DBCD4;
+        }
       ]]>
     </style>
     <marker id="arrow" markerWidth="10" markerHeight="8" refX="10" refY="4" orient="auto">
@@ -42,36 +49,62 @@
     </marker>
   </defs>
   <g>
-    <polyline points="448,164 438,164 438,302 220,302 220,266.6666666666667 230,266.6666666666667" id="3d9d9cd8fa6c7bf6" class="edge" marker-end="url(#arrow)" />
-    <polyline points="230,237.33333333333334 12,237.33333333333334 12,272.6666666666667 22,272.6666666666667" id="f6d275219d116f49" class="edge" marker-end="url(#arrow)" />
-    <polyline points="22,302 12,302 12,446.6666666666667 230,446.6666666666667" id="08d3e1e707c344f0" class="edge" marker-end="url(#arrow)" />
-    <polyline points="230,417.3333333333333 220,417.3333333333333 220,382 656,382" id="7b9b8fd71d40d59c" class="edge" marker-end="url(#arrow)" />
-    <polyline points="656,411.33333333333337 646,411.33333333333337 646,446.6666666666667 854,446.6666666666667 854,276.66666666666663 864,276.66666666666663" id="a96ee80d00c9876b" class="edge" marker-end="url(#arrow)" />
-    <polyline points="864,247.33333333333331 646,247.33333333333331 646,212 656,212" id="b2493b091b1adc2a" class="edge" marker-end="url(#arrow)" />
-    <polyline points="656,182.66666666666666 646,182.66666666666666 646,92 438,92 438,120 448,120" id="954c7e3b98713ef9" class="edge" marker-end="url(#arrow)" />
-    <polyline points="448,164 438,164 438,362 418,362" id="f304a39308d11230" class="edge" stroke-dasharray="2,2" />
-    <polyline points="448,164 438,164 438,322 418,322" id="3c8f65451f098f32" class="edge" stroke-dasharray="2,2" />
-    <polyline points="448,120 438,120 438,62 418,62" id="aa2dabc50164bcaf" class="edge" stroke-dasharray="2,2" />
-    <polyline points="448,120 438,120 438,22 418,22" id="f08e216d9a63b128" class="edge" stroke-dasharray="2,2" />
-    <polyline points="448,142 428,142 428,182 418,182" id="db9a2ce74e522b29" class="edge" stroke-dasharray="2,2" />
-    <polyline points="448,142 428,142 428,102 418,102" id="2f8914461e06bafd" class="edge" stroke-dasharray="2,2" />
-    <polyline points="448,142 418,142" id="92f18c9a39f73b15" class="edge" stroke-dasharray="2,2" />
-    <polyline points="864,247.33333333333331 854,247.33333333333331 854,201.99999999999997 1072,201.99999999999997" id="21b0aed9f295dd88" class="edge" stroke-dasharray="2,2" />
-    <polyline points="864,247.33333333333331 854,247.33333333333331 854,201.99999999999997 1062,201.99999999999997 1062,241.99999999999997 1072,241.99999999999997" id="99d77bec78adff73" class="edge" stroke-dasharray="2,2" />
-    <polyline points="864,247.33333333333331 854,247.33333333333331 854,201.99999999999997 1062,201.99999999999997 1062,282 1072,282" id="14c9867a3cfd63e3" class="edge" stroke-dasharray="2,2" />
-    <polyline points="656,212 646,212 646,292 636,292" id="bb99a52601c892b5" class="edge" stroke-dasharray="2,2" />
-    <polyline points="656,212 636,212" id="d2e86d05f1351d9a" class="edge" stroke-dasharray="2,2" />
-    <polyline points="656,212 646,212 646,252 636,252" id="87bdaff297c96fd8" class="edge" stroke-dasharray="2,2" />
-    <rect id="heating-coil-1stage" class="node" x="30" y="247.33333333333334" width="180" height="80" />
-    <g transform="translate(30,247.33333333333334)">
-      <rect id="heating-coil-1stage:heating-coil-out" class="port inlet node" x="-8" y="50.66666666666667" width="8" height="8" />
-      <g id="heating-coil-1stage:heating-coil-out" class="port inlet port" transform="translate(-8,50.66666666666667)">
+    <polyline points="411,370 391,370 391,332 183,332 183,216.66666666666669 193,216.66666666666669" id="4ccc512f28b8863e" class="edge" marker-end="url(#arrow)" />
+    <polyline points="193,187.33333333333334 183,187.33333333333334 183,134 411,134" id="2d233c19a0113fbd" class="edge" marker-end="url(#arrow)" />
+    <polyline points="411,163.33333333333334 401,163.33333333333334 401,198.66666666666669 609,198.66666666666669 609,362.00000000000006 629,362.00000000000006" id="3160a62208fb1b43" class="edge" marker-end="url(#arrow)" />
+    <polyline points="629,332.6666666666667 619,332.6666666666667 619,275.33333333333337 847,275.33333333333337" id="a5b3feecd9c58548" class="edge" marker-end="url(#arrow)" />
+    <polyline points="847,246.00000000000003 837,246.00000000000003 837,210.66666666666669 1055,210.66666666666669 1055,656.6666666666666 1065,656.6666666666666" id="b13f3d2a9b444323" class="edge" marker-end="url(#arrow)" />
+    <polyline points="1065,627.3333333333334 609,627.3333333333334 609,592 629,592" id="d02cbd7ab2cb6bb9" class="edge" marker-end="url(#arrow)" />
+    <polyline points="629,562.6666666666667 609,562.6666666666667 609,442 401,442 401,414 411,414" id="80d8d95826bab2f1" class="edge" marker-end="url(#arrow)" />
+    <polyline points="411,370 391,370 391,312 347,312" id="683518c0f2073909" class="edge" stroke-dasharray="2,2" />
+    <polyline points="411,370 391,370 391,352 380,352" id="45d1d3e8e599ed7c" class="edge" stroke-dasharray="2,2" />
+    <polyline points="411,414 401,414 401,512 347,512" id="6582dd32e19376d1" class="edge" stroke-dasharray="2,2" />
+    <polyline points="411,414 401,414 401,552 347,552" id="9e620c2044bc3726" class="edge" stroke-dasharray="2,2" />
+    <polyline points="411,392 391,392 391,472 347,472" id="921919e963dbff48" class="edge" stroke-dasharray="2,2" />
+    <polyline points="411,392 391,392 391,432 347,432" id="4075835cde579227" class="edge" stroke-dasharray="2,2" />
+    <polyline points="411,392 347,392" id="ab1103e19f8b3c0e" class="edge" stroke-dasharray="2,2" />
+    <polyline points="1065,627.3333333333334 1045,627.3333333333334 1045,732 1263,732 1263,718.6666666666667 1273,718.6666666666667" id="a0fcb9dc6e812292" class="edge" stroke-dasharray="2,2" />
+    <polyline points="1065,627.3333333333334 1045,627.3333333333334 1045,280.6666666666667 1273,280.6666666666667" id="8534df2bfbb3eba3" class="edge" stroke-dasharray="2,2" />
+    <polyline points="1065,627.3333333333334 1045,627.3333333333334 1045,280.6666666666667 1263,280.6666666666667 1263,227.33333333333337 1273,227.33333333333337" id="9461b676c28eba37" class="edge" stroke-dasharray="2,2" />
+    <polyline points="629,592 609,592 609,672 565,672" id="ab0c0df599b435e9" class="edge" stroke-dasharray="2,2" />
+    <polyline points="629,592 565,592" id="b79fd024d8e444e3" class="edge" stroke-dasharray="2,2" />
+    <polyline points="629,592 609,592 609,632 565,632" id="e741054c3ee4a1ac" class="edge" stroke-dasharray="2,2" />
+    <polyline points="381,188.66666666666666 391,188.66666666666666 391,28.666666666666664 419,28.666666666666664" id="0e97827601ddc807" class="edge" stroke-dasharray="2,2" />
+    <polyline points="381,215.33333333333334 419,215.33333333333334" id="ab4241e3da4eec11" class="edge" stroke-dasharray="2,2" />
+    <polyline points="599,148.66666666666669 637,148.66666666666669" id="1f9d26d64ae767df" class="edge" stroke-dasharray="2,2" />
+    <polyline points="599,128.66666666666669 609,128.66666666666669 609,72 637,72" id="c53247cb9b3bbcee" class="edge" stroke-dasharray="2,2" />
+    <polyline points="599,168.66666666666669 619,168.66666666666669 619,252 637,252" id="4943abe2625e538c" class="edge" stroke-dasharray="2,2" />
+    <polyline points="817,360.6666666666667 827,360.6666666666667 827,370.6666666666667 855,370.6666666666667" id="3b4eeb07ac59735f" class="edge" stroke-dasharray="2,2" />
+    <polyline points="817,334.00000000000006 855,334" id="c1ba35b4802c1e38" class="edge" stroke-dasharray="2,2" />
+    <polyline points="1035,260.6666666666667 1073,260.6666666666667" id="26e305d4f6186580" class="edge" stroke-dasharray="2,2" />
+    <polyline points="1253,642 1273,642" id="0e8a0a3f52c41a35" class="edge" stroke-dasharray="2,2" />
+    <polyline points="172,312 227,312" id="1aff90f63647cf1c" class="edge" />
+    <polyline points="172,512 227,512" id="8dd102118fc19ae9" class="edge" />
+    <polyline points="172,552 227,552" id="a76c57c13394dcc5" class="edge" />
+    <polyline points="172,472 227,472" id="a1ff6080a4c073c4" class="edge" />
+    <polyline points="172,432 227,432" id="d649100410d08e1f" class="edge" />
+    <polyline points="172,392 227,392" id="4787af5b0566036c" class="edge" />
+    <polyline points="380,22 419,22" id="b50f8f468d62e99c" class="edge" />
+    <polyline points="380,272 391,272 391,222.00000000000003 419,222.00000000000003" id="20be143b93f907e2" class="edge" />
+    <polyline points="598,65.33333333333334 637,65.33333333333334" id="ff9dacb998ad521d" class="edge" />
+    <polyline points="598,258.6666666666667 637,258.6666666666667" id="8f886375dbeef9e3" class="edge" />
+    <polyline points="816,108.66666666666667 827,108.66666666666667 827,327.33333333333337 855,327.33333333333337" id="a27f620f34b8a56f" class="edge" />
+    <polyline points="1252,712 1273,712" id="8422b7e2cfab9c52" class="edge" />
+    <polyline points="1252,300.6666666666667 1263,300.6666666666667 1263,287.3333333333333 1273,287.3333333333333" id="a53ad37b2a68f2cd" class="edge" />
+    <polyline points="1252,220.66666666666669 1273,220.66666666666669" id="90faee555aba6145" class="edge" />
+    <polyline points="380,672 445,672" id="8c061b5f8d95301b" class="edge" />
+    <polyline points="380,592 445,592" id="23f4fbeb639a1c89" class="edge" />
+    <polyline points="380,632 445,632" id="d21b6fbf1c4c522f" class="edge" />
+    <rect id="heating-coil-1stage" class="node" x="419" y="108.66666666666667" width="180" height="80" />
+    <g transform="translate(419,108.66666666666667)">
+      <rect id="heating-coil-1stage:heating-coil-out" class="port connectionpoint node" x="-8" y="50.66666666666667" width="8" height="8" />
+      <g id="heating-coil-1stage:heating-coil-out" class="port connectionpoint port" transform="translate(-8,50.66666666666667)">
         <text class="label" x="9" y="4" width="0" height="0">
           heating-coil-out
         </text>
       </g>
-      <rect id="heating-coil-1stage:heating-coil-in" class="port inlet node" x="-8" y="21.333333333333336" width="8" height="8" />
-      <g id="heating-coil-1stage:heating-coil-in" class="port inlet port" transform="translate(-8,21.333333333333336)">
+      <rect id="heating-coil-1stage:heating-coil-in" class="port connectionpoint node" x="-8" y="21.333333333333336" width="8" height="8" />
+      <g id="heating-coil-1stage:heating-coil-in" class="port connectionpoint port" transform="translate(-8,21.333333333333336)">
         <text class="label" x="9" y="4" width="0" height="0">
           heating-coil-in
         </text>
@@ -80,70 +113,58 @@
         heating-coil-1stage
       </text>
     </g>
-    <rect id="fan" class="node" x="238" y="392" width="180" height="80" />
-    <g transform="translate(238,392)">
-      <rect id="fan:fan-in" class="port inlet node" x="-8" y="50.66666666666667" width="8" height="8" />
-      <g id="fan:fan-in" class="port inlet port" transform="translate(-8,50.66666666666667)">
+    <rect id="economizer" class="node" x="419" y="352" width="180" height="80" />
+    <g transform="translate(419,352)">
+      <rect id="economizer:economizer-return-air" class="port connectionpoint node" x="-8" y="58" width="8" height="8" />
+      <g id="economizer:economizer-return-air" class="port connectionpoint port" transform="translate(-8,58)">
         <text class="label" x="9" y="4" width="0" height="0">
-          fan-in
+          economizer-return-air
         </text>
       </g>
-      <rect id="fan:fan-out" class="port inlet node" x="-8" y="21.333333333333336" width="8" height="8" />
-      <g id="fan:fan-out" class="port inlet port" transform="translate(-8,21.333333333333336)">
+      <rect id="economizer:economizer-outside-air" class="port connectionpoint node" x="-8" y="36" width="8" height="8" />
+      <g id="economizer:economizer-outside-air" class="port connectionpoint port" transform="translate(-8,36)">
         <text class="label" x="9" y="4" width="0" height="0">
-          fan-out
+          economizer-outside-air
         </text>
       </g>
-      <text class="label" x="50" y="5" width="80" height="20">
-        fan
-      </text>
-    </g>
-    <rect id="cooling-coil-2stage" class="node" x="238" y="212" width="180" height="80" />
-    <g transform="translate(238,212)">
-      <rect id="cooling-coil-2stage:cooling-coil-in" class="port inlet node" x="-8" y="50.66666666666667" width="8" height="8" />
-      <g id="cooling-coil-2stage:cooling-coil-in" class="port inlet port" transform="translate(-8,50.66666666666667)">
+      <rect id="economizer:economizer-mixed-air" class="port connectionpoint node" x="-8" y="14" width="8" height="8" />
+      <g id="economizer:economizer-mixed-air" class="port connectionpoint port" transform="translate(-8,14)">
         <text class="label" x="9" y="4" width="0" height="0">
-          cooling-coil-in
-        </text>
-      </g>
-      <rect id="cooling-coil-2stage:cooling-coil-out" class="port inlet node" x="-8" y="21.333333333333336" width="8" height="8" />
-      <g id="cooling-coil-2stage:cooling-coil-out" class="port inlet port" transform="translate(-8,21.333333333333336)">
-        <text class="label" x="9" y="4" width="0" height="0">
-          cooling-coil-out
+          economizer-mixed-air
         </text>
       </g>
       <text class="label" x="50" y="5" width="80" height="20">
-        cooling-coil-2stage
+        economizer
       </text>
     </g>
-    <rect id="zone1-hvac-space" class="node" x="664" y="157.33333333333331" width="180" height="80" />
-    <g transform="translate(664,157.33333333333331)">
-      <rect id="zone1-hvac-space:zone1-hvac-space-out" class="port inlet node" x="-8" y="21.333333333333336" width="8" height="8" />
-      <g id="zone1-hvac-space:zone1-hvac-space-out" class="port inlet port" transform="translate(-8,21.333333333333336)">
-        <text class="label" x="9" y="4" width="0" height="0">
-          zone1-hvac-space-out
-        </text>
-      </g>
-      <rect id="zone1-hvac-space:zone1-hvac-space-in" class="port inlet node" x="-8" y="50.66666666666667" width="8" height="8" />
-      <g id="zone1-hvac-space:zone1-hvac-space-in" class="port inlet port" transform="translate(-8,50.66666666666667)">
+    <rect id="zone1-hvac-space" class="node" x="637" y="537.3333333333334" width="180" height="80" />
+    <g transform="translate(637,537.3333333333334)">
+      <rect id="zone1-hvac-space:zone1-hvac-space-in" class="port connectionpoint node" x="-8" y="50.66666666666667" width="8" height="8" />
+      <g id="zone1-hvac-space:zone1-hvac-space-in" class="port connectionpoint port" transform="translate(-8,50.66666666666667)">
         <text class="label" x="9" y="4" width="0" height="0">
           zone1-hvac-space-in
+        </text>
+      </g>
+      <rect id="zone1-hvac-space:zone1-hvac-space-out" class="port connectionpoint node" x="-8" y="21.333333333333336" width="8" height="8" />
+      <g id="zone1-hvac-space:zone1-hvac-space-out" class="port connectionpoint port" transform="translate(-8,21.333333333333336)">
+        <text class="label" x="9" y="4" width="0" height="0">
+          zone1-hvac-space-out
         </text>
       </g>
       <text class="label" x="50" y="5" width="80" height="20">
         zone1-hvac-space
       </text>
     </g>
-    <rect id="vav1-dmp" class="node" x="664" y="356.6666666666667" width="180" height="80" />
-    <g transform="translate(664,356.6666666666667)">
-      <rect id="vav1-dmp:vav1-dmp-out" class="port inlet node" x="-8" y="50.66666666666667" width="8" height="8" />
-      <g id="vav1-dmp:vav1-dmp-out" class="port inlet port" transform="translate(-8,50.66666666666667)">
+    <rect id="vav1-dmp" class="node" x="855" y="220.66666666666669" width="180" height="80" />
+    <g transform="translate(855,220.66666666666669)">
+      <rect id="vav1-dmp:vav1-dmp-out" class="port connectionpoint node" x="-8" y="21.333333333333336" width="8" height="8" />
+      <g id="vav1-dmp:vav1-dmp-out" class="port connectionpoint port" transform="translate(-8,21.333333333333336)">
         <text class="label" x="9" y="4" width="0" height="0">
           vav1-dmp-out
         </text>
       </g>
-      <rect id="vav1-dmp:vav1-dmp-in" class="port inlet node" x="-8" y="21.333333333333336" width="8" height="8" />
-      <g id="vav1-dmp:vav1-dmp-in" class="port inlet port" transform="translate(-8,21.333333333333336)">
+      <rect id="vav1-dmp:vav1-dmp-in" class="port connectionpoint node" x="-8" y="50.66666666666667" width="8" height="8" />
+      <g id="vav1-dmp:vav1-dmp-in" class="port connectionpoint port" transform="translate(-8,50.66666666666667)">
         <text class="label" x="9" y="4" width="0" height="0">
           vav1-dmp-in
         </text>
@@ -152,40 +173,34 @@
         vav1-dmp
       </text>
     </g>
-    <rect id="economizer" class="node" x="456" y="102" width="180" height="80" />
-    <g transform="translate(456,102)">
-      <rect id="economizer:economizer-outside-air" class="port inlet node" x="-8" y="36" width="8" height="8" />
-      <g id="economizer:economizer-outside-air" class="port inlet port" transform="translate(-8,36)">
+    <rect id="fan" class="node" x="637" y="307.33333333333337" width="180" height="80" />
+    <g transform="translate(637,307.33333333333337)">
+      <rect id="fan:fan-in" class="port connectionpoint node" x="-8" y="50.66666666666667" width="8" height="8" />
+      <g id="fan:fan-in" class="port connectionpoint port" transform="translate(-8,50.66666666666667)">
         <text class="label" x="9" y="4" width="0" height="0">
-          economizer-outside-air
+          fan-in
         </text>
       </g>
-      <rect id="economizer:economizer-mixed-air" class="port inlet node" x="-8" y="58" width="8" height="8" />
-      <g id="economizer:economizer-mixed-air" class="port inlet port" transform="translate(-8,58)">
+      <rect id="fan:fan-out" class="port connectionpoint node" x="-8" y="21.333333333333336" width="8" height="8" />
+      <g id="fan:fan-out" class="port connectionpoint port" transform="translate(-8,21.333333333333336)">
         <text class="label" x="9" y="4" width="0" height="0">
-          economizer-mixed-air
-        </text>
-      </g>
-      <rect id="economizer:economizer-return-air" class="port inlet node" x="-8" y="14" width="8" height="8" />
-      <g id="economizer:economizer-return-air" class="port inlet port" transform="translate(-8,14)">
-        <text class="label" x="9" y="4" width="0" height="0">
-          economizer-return-air
+          fan-out
         </text>
       </g>
       <text class="label" x="50" y="5" width="80" height="20">
-        economizer
+        fan
       </text>
     </g>
-    <rect id="vav1-rhc" class="node" x="872" y="221.99999999999997" width="180" height="80" />
-    <g transform="translate(872,221.99999999999997)">
-      <rect id="vav1-rhc:vav1-rhc-out" class="port inlet node" x="-8" y="21.333333333333336" width="8" height="8" />
-      <g id="vav1-rhc:vav1-rhc-out" class="port inlet port" transform="translate(-8,21.333333333333336)">
+    <rect id="vav1-rhc" class="node" x="1073" y="602" width="180" height="80" />
+    <g transform="translate(1073,602)">
+      <rect id="vav1-rhc:vav1-rhc-out" class="port connectionpoint node" x="-8" y="21.333333333333336" width="8" height="8" />
+      <g id="vav1-rhc:vav1-rhc-out" class="port connectionpoint port" transform="translate(-8,21.333333333333336)">
         <text class="label" x="9" y="4" width="0" height="0">
           vav1-rhc-out
         </text>
       </g>
-      <rect id="vav1-rhc:vav1-rhc-in" class="port inlet node" x="-8" y="50.66666666666667" width="8" height="8" />
-      <g id="vav1-rhc:vav1-rhc-in" class="port inlet port" transform="translate(-8,50.66666666666667)">
+      <rect id="vav1-rhc:vav1-rhc-in" class="port connectionpoint node" x="-8" y="50.66666666666667" width="8" height="8" />
+      <g id="vav1-rhc:vav1-rhc-in" class="port connectionpoint port" transform="translate(-8,50.66666666666667)">
         <text class="label" x="9" y="4" width="0" height="0">
           vav1-rhc-in
         </text>
@@ -194,82 +209,358 @@
         vav1-rhc
       </text>
     </g>
-    <rect id="economizer-mix-air-flow" class="node s223property node" x="298" y="352" width="120" height="20" />
-    <g transform="translate(298,352)">
+    <rect id="cooling-coil-2stage" class="node" x="201" y="162" width="180" height="80" />
+    <g transform="translate(201,162)">
+      <rect id="cooling-coil-2stage:cooling-coil-out" class="port connectionpoint node" x="-8" y="21.333333333333336" width="8" height="8" />
+      <g id="cooling-coil-2stage:cooling-coil-out" class="port connectionpoint port" transform="translate(-8,21.333333333333336)">
+        <text class="label" x="9" y="4" width="0" height="0">
+          cooling-coil-out
+        </text>
+      </g>
+      <rect id="cooling-coil-2stage:cooling-coil-in" class="port connectionpoint node" x="-8" y="50.66666666666667" width="8" height="8" />
+      <g id="cooling-coil-2stage:cooling-coil-in" class="port connectionpoint port" transform="translate(-8,50.66666666666667)">
+        <text class="label" x="9" y="4" width="0" height="0">
+          cooling-coil-in
+        </text>
+      </g>
+      <text class="label" x="50" y="5" width="80" height="20">
+        cooling-coil-2stage
+      </text>
+    </g>
+    <rect id="economizer-mix-air-flow" class="node s223property node" x="227" y="302" width="120" height="20" />
+    <g transform="translate(227,302)">
       <text class="label" x="0" y="0" width="20" height="20">
         mixed air flow
       </text>
     </g>
-    <rect id="economizer-mix-air-humidity" class="node s223property node" x="298" y="312" width="120" height="20" />
-    <g transform="translate(298,312)">
+    <rect id="economizer-mix-air-humidity" class="node s223property node" x="260" y="342" width="120" height="20" />
+    <g transform="translate(260,342)">
       <text class="label" x="0" y="0" width="20" height="20">
         mixed air humidity
       </text>
     </g>
-    <rect id="economizer-return-air-humidity" class="node s223property node" x="298" y="52" width="120" height="20" />
-    <g transform="translate(298,52)">
+    <rect id="economizer-return-air-humidity" class="node s223property node" x="227" y="502" width="120" height="20" />
+    <g transform="translate(227,502)">
       <text class="label" x="0" y="0" width="20" height="20">
         return air humidity
       </text>
     </g>
-    <rect id="economizer-return-air-temp" class="node s223property node" x="298" y="12" width="120" height="20" />
-    <g transform="translate(298,12)">
+    <rect id="economizer-return-air-temp" class="node s223property node" x="227" y="542" width="120" height="20" />
+    <g transform="translate(227,542)">
       <text class="label" x="0" y="0" width="20" height="20">
         return air temperature
       </text>
     </g>
-    <rect id="economizer-outside-air-flow" class="node s223property node" x="298" y="172" width="120" height="20" />
-    <g transform="translate(298,172)">
+    <rect id="economizer-outside-air-flow" class="node s223property node" x="227" y="462" width="120" height="20" />
+    <g transform="translate(227,462)">
       <text class="label" x="0" y="0" width="20" height="20">
         outside air flow
       </text>
     </g>
-    <rect id="economizer-outside-air-temp" class="node s223property node" x="298" y="92" width="120" height="20" />
-    <g transform="translate(298,92)">
+    <rect id="economizer-outside-air-temp" class="node s223property node" x="227" y="422" width="120" height="20" />
+    <g transform="translate(227,422)">
       <text class="label" x="0" y="0" width="20" height="20">
         outside air temperature
       </text>
     </g>
-    <rect id="economizer-outside-air-humidity" class="node s223property node" x="298" y="132" width="120" height="20" />
-    <g transform="translate(298,132)">
+    <rect id="economizer-outside-air-humidity" class="node s223property node" x="227" y="382" width="120" height="20" />
+    <g transform="translate(227,382)">
       <text class="label" x="0" y="0" width="20" height="20">
         outside air humidity
       </text>
     </g>
-    <rect id="vav1-sup-air-flow" class="node s223property node" x="1072" y="191.99999999999997" width="120" height="20" />
-    <g transform="translate(1072,191.99999999999997)">
+    <rect id="vav1-sup-air-flow" class="node s223property node" x="1273" y="705.3333333333334" width="120" height="20" />
+    <g transform="translate(1273,705.3333333333334)">
       <text class="label" x="0" y="0" width="20" height="20">
         supply air flow
       </text>
     </g>
-    <rect id="vav1-sup-air-temp" class="node s223property node" x="1072" y="231.99999999999997" width="120" height="20" />
-    <g transform="translate(1072,231.99999999999997)">
+    <rect id="vav1-sup-air-temp" class="node s223property node" x="1273" y="274" width="120" height="20" />
+    <g transform="translate(1273,274)">
       <text class="label" x="0" y="0" width="20" height="20">
         supply air temperature
       </text>
     </g>
-    <rect id="vav1-sup-air-humidity" class="node s223property node" x="1072" y="272" width="120" height="20" />
-    <g transform="translate(1072,272)">
+    <rect id="vav1-sup-air-humidity" class="node s223property node" x="1273" y="214.00000000000003" width="120" height="20" />
+    <g transform="translate(1273,214.00000000000003)">
       <text class="label" x="0" y="0" width="20" height="20">
         supply air humidity
       </text>
     </g>
-    <rect id="zone1-temp" class="node s223property node" x="516" y="282" width="120" height="20" />
-    <g transform="translate(516,282)">
+    <rect id="zone1-temp" class="node s223property node" x="445" y="662" width="120" height="20" />
+    <g transform="translate(445,662)">
       <text class="label" x="0" y="0" width="20" height="20">
         Temperature
       </text>
     </g>
-    <rect id="zone1-flow" class="node s223property node" x="516" y="202" width="120" height="20" />
-    <g transform="translate(516,202)">
+    <rect id="zone1-flow" class="node s223property node" x="445" y="582" width="120" height="20" />
+    <g transform="translate(445,582)">
       <text class="label" x="0" y="0" width="20" height="20">
         Zone Air Flow
       </text>
     </g>
-    <rect id="zone1-humidity" class="node s223property node" x="516" y="242" width="120" height="20" />
-    <g transform="translate(516,242)">
+    <rect id="zone1-humidity" class="node s223property node" x="445" y="622" width="120" height="20" />
+    <g transform="translate(445,622)">
       <text class="label" x="0" y="0" width="20" height="20">
         Humidity
+      </text>
+    </g>
+    <rect id="cooling-coil-power" class="node s223property node" x="419" y="15.333333333333334" width="120" height="20" />
+    <g transform="translate(419,15.333333333333334)">
+      <text class="label" x="0" y="0" width="20" height="20">
+        instantaneous cooling output
+      </text>
+    </g>
+    <rect id="cooling-coil-total-cooling" class="node s223property node" x="419" y="208.66666666666669" width="120" height="20" />
+    <g transform="translate(419,208.66666666666669)">
+      <text class="label" x="0" y="0" width="20" height="20">
+        total delivered cooling
+      </text>
+    </g>
+    <rect id="heating-coil-onoff" class="node s223property node" x="637" y="138.66666666666669" width="120" height="20" />
+    <g transform="translate(637,138.66666666666669)">
+      <text class="label" x="0" y="0" width="20" height="20">
+        heating coil on/off
+      </text>
+    </g>
+    <rect id="heating-coil-power" class="node s223property node" x="637" y="58.66666666666667" width="120" height="20" />
+    <g transform="translate(637,58.66666666666667)">
+      <text class="label" x="0" y="0" width="20" height="20">
+        instantaneous heating output
+      </text>
+    </g>
+    <rect id="heating-coil-total-heating" class="node s223property node" x="637" y="245.33333333333334" width="120" height="20" />
+    <g transform="translate(637,245.33333333333334)">
+      <text class="label" x="0" y="0" width="20" height="20">
+        total delivered heating
+      </text>
+    </g>
+    <rect id="fan-speed" class="node s223property node" x="855" y="360.6666666666667" width="120" height="20" />
+    <g transform="translate(855,360.6666666666667)">
+      <text class="label" x="0" y="0" width="20" height="20">
+        Fan Speed
+      </text>
+    </g>
+    <rect id="fan-power" class="node s223property node" x="855" y="320.6666666666667" width="120" height="20" />
+    <g transform="translate(855,320.6666666666667)">
+      <text class="label" x="0" y="0" width="20" height="20">
+        fan power consumption
+      </text>
+    </g>
+    <rect id="vav1-dmp-damper-pos" class="node s223property node" x="1073" y="250.66666666666669" width="120" height="20" />
+    <g transform="translate(1073,250.66666666666669)">
+      <text class="label" x="0" y="0" width="20" height="20">
+        VAV Damper Position
+      </text>
+    </g>
+    <rect id="vav1-rhc-onoff" class="node s223property node" x="1273" y="632" width="120" height="20" />
+    <g transform="translate(1273,632)">
+      <text class="label" x="0" y="0" width="20" height="20">
+        reheat coil on/off
+      </text>
+    </g>
+    <rect id="economizer-mix-air-flow-sensor" class="node sensor node" x="12" y="302" width="160" height="20" />
+    <g transform="translate(12,302)">
+      <rect id="economizer-mix-air-flow-sensor:observes" class="port node" x="160" y="10" width="0" height="0" />
+      <g id="economizer-mix-air-flow-sensor:observes" class="port port" transform="translate(160,10)">
+        <text class="label" x="1" y="1" width="0" height="0">
+          observes
+        </text>
+      </g>
+      <text class="label" x="0" y="0" width="20" height="20">
+        economizer-mix-air-flow-sensor
+      </text>
+    </g>
+    <rect id="economizer-return-air-humidity-sensor" class="node sensor node" x="12" y="502" width="160" height="20" />
+    <g transform="translate(12,502)">
+      <rect id="economizer-return-air-humidity-sensor:observes" class="port node" x="160" y="10" width="0" height="0" />
+      <g id="economizer-return-air-humidity-sensor:observes" class="port port" transform="translate(160,10)">
+        <text class="label" x="1" y="1" width="0" height="0">
+          observes
+        </text>
+      </g>
+      <text class="label" x="0" y="0" width="20" height="20">
+        economizer-return-air-humidity-sensor
+      </text>
+    </g>
+    <rect id="economizer-return-air-temp-sensor" class="node sensor node" x="12" y="542" width="160" height="20" />
+    <g transform="translate(12,542)">
+      <rect id="economizer-return-air-temp-sensor:observes" class="port node" x="160" y="10" width="0" height="0" />
+      <g id="economizer-return-air-temp-sensor:observes" class="port port" transform="translate(160,10)">
+        <text class="label" x="1" y="1" width="0" height="0">
+          observes
+        </text>
+      </g>
+      <text class="label" x="0" y="0" width="20" height="20">
+        economizer-return-air-temp-sensor
+      </text>
+    </g>
+    <rect id="economizer-outside-air-flow-sensor" class="node sensor node" x="12" y="462" width="160" height="20" />
+    <g transform="translate(12,462)">
+      <rect id="economizer-outside-air-flow-sensor:observes" class="port node" x="160" y="10" width="0" height="0" />
+      <g id="economizer-outside-air-flow-sensor:observes" class="port port" transform="translate(160,10)">
+        <text class="label" x="1" y="1" width="0" height="0">
+          observes
+        </text>
+      </g>
+      <text class="label" x="0" y="0" width="20" height="20">
+        economizer-outside-air-flow-sensor
+      </text>
+    </g>
+    <rect id="economizer-outside-air-temp-sensor" class="node sensor node" x="12" y="422" width="160" height="20" />
+    <g transform="translate(12,422)">
+      <rect id="economizer-outside-air-temp-sensor:observes" class="port node" x="160" y="10" width="0" height="0" />
+      <g id="economizer-outside-air-temp-sensor:observes" class="port port" transform="translate(160,10)">
+        <text class="label" x="1" y="1" width="0" height="0">
+          observes
+        </text>
+      </g>
+      <text class="label" x="0" y="0" width="20" height="20">
+        economizer-outside-air-temp-sensor
+      </text>
+    </g>
+    <rect id="economizer-outside-air-humidity-sensor" class="node sensor node" x="12" y="382" width="160" height="20" />
+    <g transform="translate(12,382)">
+      <rect id="economizer-outside-air-humidity-sensor:observes" class="port node" x="160" y="10" width="0" height="0" />
+      <g id="economizer-outside-air-humidity-sensor:observes" class="port port" transform="translate(160,10)">
+        <text class="label" x="1" y="1" width="0" height="0">
+          observes
+        </text>
+      </g>
+      <text class="label" x="0" y="0" width="20" height="20">
+        economizer-outside-air-humidity-sensor
+      </text>
+    </g>
+    <rect id="cooling-coil-power-sensor" class="node sensor node" x="220" y="12" width="160" height="20" />
+    <g transform="translate(220,12)">
+      <rect id="cooling-coil-power-sensor:observes" class="port node" x="160" y="10" width="0" height="0" />
+      <g id="cooling-coil-power-sensor:observes" class="port port" transform="translate(160,10)">
+        <text class="label" x="1" y="1" width="0" height="0">
+          observes
+        </text>
+      </g>
+      <text class="label" x="0" y="0" width="20" height="20">
+        cooling-coil-power-sensor
+      </text>
+    </g>
+    <rect id="cooling-coil-total-cooling-sensor" class="node sensor node" x="220" y="262" width="160" height="20" />
+    <g transform="translate(220,262)">
+      <rect id="cooling-coil-total-cooling-sensor:observes" class="port node" x="160" y="10" width="0" height="0" />
+      <g id="cooling-coil-total-cooling-sensor:observes" class="port port" transform="translate(160,10)">
+        <text class="label" x="1" y="1" width="0" height="0">
+          observes
+        </text>
+      </g>
+      <text class="label" x="0" y="0" width="20" height="20">
+        cooling-coil-total-cooling-sensor
+      </text>
+    </g>
+    <rect id="heating-coil-power-sensor" class="node sensor node" x="438" y="55.333333333333336" width="160" height="20" />
+    <g transform="translate(438,55.333333333333336)">
+      <rect id="heating-coil-power-sensor:observes" class="port node" x="160" y="10" width="0" height="0" />
+      <g id="heating-coil-power-sensor:observes" class="port port" transform="translate(160,10)">
+        <text class="label" x="1" y="1" width="0" height="0">
+          observes
+        </text>
+      </g>
+      <text class="label" x="0" y="0" width="20" height="20">
+        heating-coil-power-sensor
+      </text>
+    </g>
+    <rect id="heating-coil-total-heating-sensor" class="node sensor node" x="438" y="248.66666666666669" width="160" height="20" />
+    <g transform="translate(438,248.66666666666669)">
+      <rect id="heating-coil-total-heating-sensor:observes" class="port node" x="160" y="10" width="0" height="0" />
+      <g id="heating-coil-total-heating-sensor:observes" class="port port" transform="translate(160,10)">
+        <text class="label" x="1" y="1" width="0" height="0">
+          observes
+        </text>
+      </g>
+      <text class="label" x="0" y="0" width="20" height="20">
+        heating-coil-total-heating-sensor
+      </text>
+    </g>
+    <rect id="fan-power-sensor" class="node sensor node" x="656" y="98.66666666666667" width="160" height="20" />
+    <g transform="translate(656,98.66666666666667)">
+      <rect id="fan-power-sensor:observes" class="port node" x="160" y="10" width="0" height="0" />
+      <g id="fan-power-sensor:observes" class="port port" transform="translate(160,10)">
+        <text class="label" x="1" y="1" width="0" height="0">
+          observes
+        </text>
+      </g>
+      <text class="label" x="0" y="0" width="20" height="20">
+        fan-power-sensor
+      </text>
+    </g>
+    <rect id="vav1-sup-air-flow-sensor" class="node sensor node" x="1092" y="702" width="160" height="20" />
+    <g transform="translate(1092,702)">
+      <rect id="vav1-sup-air-flow-sensor:observes" class="port node" x="160" y="10" width="0" height="0" />
+      <g id="vav1-sup-air-flow-sensor:observes" class="port port" transform="translate(160,10)">
+        <text class="label" x="1" y="1" width="0" height="0">
+          observes
+        </text>
+      </g>
+      <text class="label" x="0" y="0" width="20" height="20">
+        vav1-sup-air-flow-sensor
+      </text>
+    </g>
+    <rect id="vav1-sup-air-temp-sensor" class="node sensor node" x="1092" y="290.6666666666667" width="160" height="20" />
+    <g transform="translate(1092,290.6666666666667)">
+      <rect id="vav1-sup-air-temp-sensor:observes" class="port node" x="160" y="10" width="0" height="0" />
+      <g id="vav1-sup-air-temp-sensor:observes" class="port port" transform="translate(160,10)">
+        <text class="label" x="1" y="1" width="0" height="0">
+          observes
+        </text>
+      </g>
+      <text class="label" x="0" y="0" width="20" height="20">
+        vav1-sup-air-temp-sensor
+      </text>
+    </g>
+    <rect id="vav1-sup-air-humidity-sensor" class="node sensor node" x="1092" y="210.66666666666669" width="160" height="20" />
+    <g transform="translate(1092,210.66666666666669)">
+      <rect id="vav1-sup-air-humidity-sensor:observes" class="port node" x="160" y="10" width="0" height="0" />
+      <g id="vav1-sup-air-humidity-sensor:observes" class="port port" transform="translate(160,10)">
+        <text class="label" x="1" y="1" width="0" height="0">
+          observes
+        </text>
+      </g>
+      <text class="label" x="0" y="0" width="20" height="20">
+        vav1-sup-air-humidity-sensor
+      </text>
+    </g>
+    <rect id="zone1-temp-sensor" class="node sensor node" x="220" y="662" width="160" height="20" />
+    <g transform="translate(220,662)">
+      <rect id="zone1-temp-sensor:observes" class="port node" x="160" y="10" width="0" height="0" />
+      <g id="zone1-temp-sensor:observes" class="port port" transform="translate(160,10)">
+        <text class="label" x="1" y="1" width="0" height="0">
+          observes
+        </text>
+      </g>
+      <text class="label" x="0" y="0" width="20" height="20">
+        zone1-temp-sensor
+      </text>
+    </g>
+    <rect id="zone1-flow-sensor" class="node sensor node" x="220" y="582" width="160" height="20" />
+    <g transform="translate(220,582)">
+      <rect id="zone1-flow-sensor:observes" class="port node" x="160" y="10" width="0" height="0" />
+      <g id="zone1-flow-sensor:observes" class="port port" transform="translate(160,10)">
+        <text class="label" x="1" y="1" width="0" height="0">
+          observes
+        </text>
+      </g>
+      <text class="label" x="0" y="0" width="20" height="20">
+        zone1-flow-sensor
+      </text>
+    </g>
+    <rect id="zone1-humidity-sensor" class="node sensor node" x="220" y="622" width="160" height="20" />
+    <g transform="translate(220,622)">
+      <rect id="zone1-humidity-sensor:observes" class="port node" x="160" y="10" width="0" height="0" />
+      <g id="zone1-humidity-sensor:observes" class="port port" transform="translate(160,10)">
+        <text class="label" x="1" y="1" width="0" height="0">
+          observes
+        </text>
+      </g>
+      <text class="label" x="0" y="0" width="20" height="20">
+        zone1-humidity-sensor
       </text>
     </g>
   </g>

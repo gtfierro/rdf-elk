@@ -247,6 +247,18 @@ rect.connectionpoint {
   opacity: 1;
   fill: #FD4659;
 }
+ellipse {
+  opacity: 0.3;
+  fill: #9DBCD4;
+  stroke-width: 1;
+  stroke: #222222;
+}
+circle  {
+  opacity: 0.3;
+  fill: #32BF84;
+  stroke-width: 1;
+  stroke: #222222;
+}
 text {
   font-size: 10px;
   font-family: sans-serif;

@@ -1,0 +1,30 @@
+{
+  "name": "elkjs-svg",
+  "version": "0.2.1",
+  "author": {
+    "name": "Emil Stenstrom",
+    "email": "emil@emilstenstrom.se"
+  },
+  "description": "Simple SVG renderer for elkjs",
+  "main": "elkjs-svg.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EmilStenstrom/elkjs-svg"
+  },
+  "dependencies": {
+    "elkjs": "^0.7.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "xml2js": "*"
+  },
+  "scripts": {
+    "test": "mocha test/test*",
+    "render": "node test/cli-render.js"
+  },
+  "engines": {
+    "node": ">=14.0"
+  },
+  "license": "MIT"
+}

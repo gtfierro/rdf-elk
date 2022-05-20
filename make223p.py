@@ -289,7 +289,7 @@ rect.sensor {
 
 js = f"""
 const ELK = require('elkjs')
-const elksvg = require('elkjs-svg');
+const elksvg = require('./elkjs-svg');
 
 const graph = {json.dumps(doc, indent=2)};
 

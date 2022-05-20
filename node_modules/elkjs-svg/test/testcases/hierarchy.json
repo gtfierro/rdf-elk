@@ -1,0 +1,83 @@
+{
+    "id": "root",
+    "layoutOptions": {
+        "algorithm": "layered",
+        "elk.direction": "DOWN",
+        "nodePlacement.strategy": "LINEAR_SEGMENTS"
+    },
+    "children": [
+        {
+            "id": "P1",
+            "width": 100,
+            "height": 50,
+            "ports": [
+                {"id": "P1:n", "layoutOptions": {"side": "NORTH"}},
+                {"id": "P1:s", "layoutOptions": {"side": "SOUTH"}}
+            ],
+            "labels": [{
+                "text": "P1"
+            }]
+        },
+        {
+            "id": "P2",
+            "width": 100,
+            "height": 50,
+            "ports": [
+                {"id": "P2:n", "layoutOptions": {"side": "NORTH"}},
+                {"id": "P2:s", "layoutOptions": {"side": "SOUTH"}}
+            ],
+            "labels": [{
+                "text": "P2"
+            }]
+        },
+        {
+            "id": "P3",
+            "width": 100,
+            "height": 50,
+            "ports": [
+                {"id": "P3:n", "layoutOptions": {"side": "NORTH"}}
+            ],
+            "labels": [{
+                "text": "P3"
+            }]
+        },
+        {
+            "id": "P4",
+            "width": 100,
+            "height": 50,
+            "ports": [
+                {"id": "P4:n", "layoutOptions": {"side": "NORTH"}}
+            ],
+            "labels": [{
+                "text": "P4"
+            }]
+        },
+        {
+            "id": "P5",
+            "width": 100,
+            "height": 50,
+            "ports": [
+                {"id": "P5:n", "layoutOptions": {"side": "NORTH"}}
+            ],
+            "labels": [{
+                "text": "P5"
+            }]
+        },
+        {
+            "id": "R1",
+            "width": 0,
+            "height": 0,
+            "ports": [
+                {"id": "R1:n", "layoutOptions": {"side": "NORTH"}},
+                {"id": "R1:s", "layoutOptions": {"side": "SOUTH"}}
+            ]
+        }
+    ],
+    "edges": [
+        {"id": "E1", "sources": [ "P1:s" ], "targets": [ "R1:n" ] },
+        {"id": "E2", "sources": [ "P2:s" ], "targets": [ "R1:n" ] },
+        {"id": "E3", "sources": [ "R1:s" ], "targets": [ "P3:n" ] },
+        {"id": "E4", "sources": [ "R1:s" ], "targets": [ "P4:n" ] },
+        {"id": "E5", "sources": [ "R1:s" ], "targets": [ "P5:n" ] }
+    ]
+}

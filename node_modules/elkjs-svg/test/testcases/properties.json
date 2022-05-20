@@ -1,0 +1,14 @@
+{
+    "id": "root",
+    "children": [
+        {
+          "id": "node1",
+          "class": ["myClass", "otherClass"],
+          "attributes": {
+            "data-foo": "bar",
+            "rx": 5
+          },
+          "style": "fill: #ddd;"
+        }
+    ]
+}

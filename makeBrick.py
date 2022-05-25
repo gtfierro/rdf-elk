@@ -216,4 +216,5 @@ elk.layout(graph)
 """
 
 #print(json.dumps(doc, indent=2))
-print(js)
+with open("output.js", "w") as f:
+    f.write(js)

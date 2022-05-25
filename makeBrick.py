@@ -60,10 +60,11 @@ for row in res:
         continue
     cls = g.value(og_node, RDF.type)
     node = nid(og_node)
+    label = str(label) if label else node
     nodes[node]["id"] = node
-    nodes[node]["width"] = 180
+    nodes[node]["width"] = 10*max(len(label), len(nid(cls)))
     nodes[node]["height"] = 80
-    nodes[node]["labels"] = [{"text": str(label) if label else node, "height": 20, "width": 60}, {"text": nid(cls), "height": 20, "width": 60}]
+    nodes[node]["labels"] = [{"text": label, "height": 20, "width": len(label)}, {"text": nid(cls), "height": 20, "width": len(nid(cls))}]
     nodes[node]["layoutOptions"] =  {
         "nodeLabels.placement": "[H_LEFT, V_TOP, INSIDE]",
     }
@@ -77,6 +78,7 @@ for row in res:
 
 
     # get parts
+    largest_internal_node = 0
     parts = g.query(f"""SELECT DISTINCT ?part ?label WHERE {{
         {og_node.n3()} brick:hasPart+ ?part .
         OPTIONAL {{ ?part rdfs:label ?label }}
@@ -92,17 +94,20 @@ for row in res:
         else:
             svg_classes = []
         part = nid(part)
+        label = str(label) if label else part
         nodes[node]["children"].append({
             "id": part,
-            "width": 60,
+            "width": 10*max(len(label), len(nid(cls))),
             "height": 60,
-            "labels": [{"text": str(label) if label else part, "height": 20, "width": 60}, {"text": nid(cls), "height": 20, "width": 60}],
+            "labels": [{"text": label, "height": 20, "width": len(label)}, {"text": nid(cls), "height": 20, "width": len(nid(cls))}],
             "layoutOptions": {
                 "nodeLabels.placement": "[H_LEFT, V_TOP, INSIDE]",
             },
             "ports": [],
             "class": svg_classes,
         })
+        largest_internal_node = max(largest_internal_node, 8*max(len(label), len(nid(cls))))
+    nodes[node]["width"] = max(nodes[node]["width"], largest_internal_node)
 
 # define topology (edges)
 res = g.query("""SELECT ?e1 ?e2 WHERE {
@@ -133,7 +138,7 @@ for row in res:
     point = nid(point)
     host = nid(host)
     nodes[point]["id"] = point
-    nodes[point]["width"] = 140
+    nodes[point]["width"] = 250
     nodes[point]["height"] = 40
     nodes[point]["labels"] = [{"text": str(label) if label else point, "height": 20, "width": 60}, {"text": nid(cls), "height": 20, "width": 60}]
     nodes[point]["layoutOptions"] =  {
@@ -180,7 +185,7 @@ rect.location {
 }
 text {
   font-size: 10px;
-  font-family: sans-serif;
+  font-family: monospace;
   /* in elk's coordinates "hanging" would be the correct value" */
   dominant-baseline: hanging;
   text-align: left;

@@ -63,8 +63,8 @@ for row in res:
     label = str(label) if label else node
     nodes[node]["id"] = node
     nodes[node]["width"] = 10*max(len(label), len(nid(cls)))
-    nodes[node]["height"] = 80
-    nodes[node]["labels"] = [{"text": label, "height": 20, "width": len(label)}, {"text": nid(cls), "height": 20, "width": len(nid(cls))}]
+    nodes[node]["height"] = 40
+    nodes[node]["labels"] = [{"text": label, "height": 20, "width": len(label), "class": "entity"}, {"text": nid(cls), "height": 20, "width": len(nid(cls))}]
     nodes[node]["layoutOptions"] =  {
         "nodeLabels.placement": "[H_LEFT, V_TOP, INSIDE]",
     }
@@ -98,8 +98,8 @@ for row in res:
         nodes[node]["children"].append({
             "id": part,
             "width": 10*max(len(label), len(nid(cls))),
-            "height": 60,
-            "labels": [{"text": label, "height": 20, "width": len(label)}, {"text": nid(cls), "height": 20, "width": len(nid(cls))}],
+            "height": 40,
+            "labels": [{"text": label, "height": 20, "width": len(label), "class": "entity"}, {"text": nid(cls), "height": 20, "width": len(nid(cls))}],
             "layoutOptions": {
                 "nodeLabels.placement": "[H_LEFT, V_TOP, INSIDE]",
             },
@@ -140,7 +140,7 @@ for row in res:
     nodes[point]["id"] = point
     nodes[point]["width"] = 250
     nodes[point]["height"] = 40
-    nodes[point]["labels"] = [{"text": str(label) if label else point, "height": 20, "width": 60}, {"text": nid(cls), "height": 20, "width": 60}]
+    nodes[point]["labels"] = [{"text": str(label) if label else point, "height": 20, "width": 60, "class": "entity"}, {"text": nid(cls), "height": 20, "width": 60}]
     nodes[point]["layoutOptions"] =  {
         "nodeLabels.placement": "[H_LEFT, V_TOP, INSIDE]",
     }
@@ -189,6 +189,10 @@ text {
   /* in elk's coordinates "hanging" would be the correct value" */
   dominant-baseline: hanging;
   text-align: left;
+}
+text.entity {
+  font-size: 13px;
+  font-weight: bold;
 }
 g.port > text {
   font-size: 8px;
